@@ -79,6 +79,7 @@ class _HomeState extends State<Home> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         CircleAvatar(
+                          backgroundColor: Colors.white,
                           backgroundImage: querySnapshot
                                           .documents[i].data['weather'] !=
                                       null ||

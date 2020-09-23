@@ -106,7 +106,7 @@ class _DiscoveryPage extends State<DiscoveryPage> {
       if (results.length >= 1) {
         print(results.length);
         discoveries.add({
-          'commentaire': 'Les gens près', //modifier le commentaire plus tard
+          'commentaire': 'Embouteillage', //modifier le commentaire plus tard
           'date': DateTime.now(),
           'location': _currentAddress,
           'discovery': {

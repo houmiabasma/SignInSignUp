@@ -108,7 +108,7 @@ class _DiscoveryPage extends State<DiscoveryPage> {
         discoveries.add({
           'commentaire': 'Embouteillage', //modifier le commentaire plus tard
           'date': DateTime.now(),
-          'location': _currentAddress,
+          'location': "lat: ${_position.latitude} , long: ${_position.longitude}",
           'discovery': {
             'location': _position.toJson(),
             'latitude': _position.latitude,

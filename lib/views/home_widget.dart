@@ -181,36 +181,9 @@ class _HomeState extends State<Home> {
                         ? Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                                Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      ValueTile(
-                                          "Température",
-                                          querySnapshot.documents[i]
-                                              .data['weather']['temperature']
-                                              .toString()),
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            left: 15, right: 15),
-                                        child: Center(
-                                            child: Container(
-                                          width: 1,
-                                          height: 30,
-                                        )),
-                                      ),
-                                      ValueTile(
-                                          "Vent",
-                                          querySnapshot.documents[i]
-                                              .data['weather']['windSpeed']),
-                                    ]),
                                 Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 15, right: 15),
-                                  child: Center(
-                                      child: Container(
-                                    width: 1,
-                                    height: 15,
-                                  )),
+                                  child: Divider(),
+                                  padding: EdgeInsets.only(top: 5),
                                 ),
                                 Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -232,6 +205,35 @@ class _HomeState extends State<Home> {
                                           "Coucher du soleil",
                                           querySnapshot.documents[i]
                                               .data['weather']['sunset']),
+                                    ]),
+                                Padding(
+                                  child: Divider(),
+                                  padding: EdgeInsets.all(5),
+                                ),
+                                Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: <Widget>[
+                                      ValueTile(
+                                          "Température",
+                                          querySnapshot
+                                                  .documents[i]
+                                                  .data['weather']
+                                                      ['temperature']
+                                                  .toString() +
+                                              "°"),
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            left: 15, right: 15),
+                                        child: Center(
+                                            child: Container(
+                                          width: 1,
+                                          height: 30,
+                                        )),
+                                      ),
+                                      ValueTile(
+                                          "Vent",
+                                          querySnapshot.documents[i]
+                                              .data['weather']['windSpeed']),
                                       Padding(
                                         padding: const EdgeInsets.only(
                                             left: 15, right: 15),
@@ -245,7 +247,11 @@ class _HomeState extends State<Home> {
                                           "Humidité",
                                           querySnapshot.documents[i]
                                               .data['weather']['humidity']),
-                                    ])
+                                    ]),
+                                Padding(
+                                  child: Divider(),
+                                  padding: EdgeInsets.all(5),
+                                ),
                               ])
                         : Container(),
                     querySnapshot.documents[i].data['discovery'] != null

@@ -52,7 +52,7 @@ class _WeatherScreenState extends State<WeatherScreen>
     // Call the user's CollectionReference to add a new user
     return _weather
         .add({
-          'commentaire': '${weather.cityName}: ${weather.description}',
+          'commentaire': '${weather.cityName} : ${weather.description}',
           'location': "${weather.cityName}",
           'date': DateTime.now(),
           'weather': {

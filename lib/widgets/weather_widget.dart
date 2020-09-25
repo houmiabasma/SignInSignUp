@@ -39,7 +39,6 @@ class WeatherWidget extends StatelessWidget {
             child: Divider(),
             padding: EdgeInsets.all(10),
           ),
-          
           Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
             ValueTile("Vent", '${this.weather.windSpeed} m/s'),
             Padding(
@@ -50,6 +49,12 @@ class WeatherWidget extends StatelessWidget {
                 height: 30,
               )),
             ),
+            ValueTile("Humidité", '${this.weather.humidity}%'),
+          ]),
+          Padding(
+            padding: EdgeInsets.all(10),
+          ),
+          Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
             ValueTile(
                 "Lever du soleil",
                 DateFormat('h:m a').format(DateTime.fromMillisecondsSinceEpoch(
@@ -66,16 +71,11 @@ class WeatherWidget extends StatelessWidget {
                 "Coucher du soleil",
                 DateFormat('h:m a').format(DateTime.fromMillisecondsSinceEpoch(
                     this.weather.sunset * 1000))),
-            Padding(
-              padding: const EdgeInsets.only(left: 15, right: 15),
-              child: Center(
-                  child: Container(
-                width: 1,
-                height: 30,
-              )),
-            ),
-            ValueTile("Humidité", '${this.weather.humidity}%'),
           ]),
+          Padding(
+            child: Divider(),
+            padding: EdgeInsets.only(top: 10),
+          ),
         ],
       ),
     );

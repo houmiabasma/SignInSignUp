@@ -19,6 +19,7 @@ class ValueTile extends StatelessWidget {
       children: <Widget>[
         Text(
           this.label,
+          textAlign: TextAlign.center,
           style: TextStyle(),
         ),
         SizedBox(
@@ -35,6 +36,7 @@ class ValueTile extends StatelessWidget {
         ),
         Text(
           this.value,
+          textAlign: TextAlign.center,
           style: TextStyle(),
         ),
       ],

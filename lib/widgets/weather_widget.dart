@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:pfa_project_cloudhpc/models/weather.dart';
 import 'package:pfa_project_cloudhpc/widgets/current_conditions.dart';
@@ -41,7 +40,6 @@ class WeatherWidget extends StatelessWidget {
             padding: EdgeInsets.all(10),
           ),
           Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
-            ValueTile("wind speed", '${this.weather.windSpeed} m/s'),
             Padding(
               padding: const EdgeInsets.only(left: 15, right: 15),
               child: Center(
@@ -51,7 +49,7 @@ class WeatherWidget extends StatelessWidget {
               )),
             ),
             ValueTile(
-                "sunrise",
+                "Lever du soleil",
                 DateFormat('h:m a').format(DateTime.fromMillisecondsSinceEpoch(
                     this.weather.sunrise * 1000))),
             Padding(
@@ -63,7 +61,7 @@ class WeatherWidget extends StatelessWidget {
               )),
             ),
             ValueTile(
-                "sunset",
+                "Coucher du soleil",
                 DateFormat('h:m a').format(DateTime.fromMillisecondsSinceEpoch(
                     this.weather.sunset * 1000))),
             Padding(
@@ -74,7 +72,7 @@ class WeatherWidget extends StatelessWidget {
                 height: 30,
               )),
             ),
-            ValueTile("humidity", '${this.weather.humidity}%'),
+            ValueTile("Humidité", '${this.weather.humidity}%'),
           ]),
         ],
       ),

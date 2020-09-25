@@ -128,7 +128,7 @@ class _HomeState extends State<Home> {
                                       null
                                   ? querySnapshot.documents[i].data['location']
                                       .toString()
-                                  : "Location Undefined",
+                                  : "Emplacement non défini",
                               style: TextStyle(
                                 fontSize: 14,
                               ),
@@ -185,7 +185,7 @@ class _HomeState extends State<Home> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: <Widget>[
                                       ValueTile(
-                                          "temperature",
+                                          "Température",
                                           querySnapshot.documents[i]
                                               .data['weather']['temperature']
                                               .toString()),
@@ -199,7 +199,7 @@ class _HomeState extends State<Home> {
                                         )),
                                       ),
                                       ValueTile(
-                                          "wind speed",
+                                          "Vent",
                                           querySnapshot.documents[i]
                                               .data['weather']['windSpeed']),
                                     ]),
@@ -216,7 +216,7 @@ class _HomeState extends State<Home> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: <Widget>[
                                       ValueTile(
-                                          "sunrise",
+                                          "lever du soleil",
                                           querySnapshot.documents[i]
                                               .data['weather']['sunrise']),
                                       Padding(
@@ -229,7 +229,7 @@ class _HomeState extends State<Home> {
                                         )),
                                       ),
                                       ValueTile(
-                                          "sunset",
+                                          "Coucher du soleil",
                                           querySnapshot.documents[i]
                                               .data['weather']['sunset']),
                                       Padding(
@@ -242,7 +242,7 @@ class _HomeState extends State<Home> {
                                         )),
                                       ),
                                       ValueTile(
-                                          "humidity",
+                                          "Humidité",
                                           querySnapshot.documents[i]
                                               .data['weather']['humidity']),
                                     ])

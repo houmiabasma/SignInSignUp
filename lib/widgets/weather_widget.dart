@@ -39,7 +39,9 @@ class WeatherWidget extends StatelessWidget {
             child: Divider(),
             padding: EdgeInsets.all(10),
           ),
+          
           Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+            ValueTile("Vent", '${this.weather.windSpeed} m/s'),
             Padding(
               padding: const EdgeInsets.only(left: 15, right: 15),
               child: Center(
